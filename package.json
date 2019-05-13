@@ -1,0 +1,43 @@
+{
+  "name": "@jchpro/web-app-mongoose",
+  "version": "0.1.0",
+  "description": "Express Web Application Mongoose (MongoDB) interface",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev-app": "ts-node ./dev/app",
+    "dev-app-watch": "nodemon",
+    "build": "tsc"
+  },
+  "keywords": [
+    "express",
+    "web",
+    "application",
+    "mongoose",
+    "mongodb"
+  ],
+  "author": "Jakub Chmielewski",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JakeC2i/web-app-mongoose.git"
+  },
+  "dependencies": {
+    "@jchpro/web-app-core": "^0.1.0",
+    "brit": "^0.5.0",
+    "lodash": "^4.17.11",
+    "mongoose": "^5.5.7"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.126",
+    "@types/mongoose": "^5.5.0"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "./src",
+      "./dev"
+    ],
+    "ext": "ts",
+    "exec": "ts-node ./dev/app"
+  }
+}
