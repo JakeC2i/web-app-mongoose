@@ -1,4 +1,4 @@
-import * as mongoose from "mongoose";
+const mongoose = require('mongoose');
 import {Document, DocumentQuery, Model, Schema, SchemaDefinition, SchemaTimestampsConfig} from "mongoose";
 import * as _ from 'lodash';
 
@@ -20,7 +20,7 @@ export class ModelWrapper<TDocument extends Document & TDataShape = any, TDataSh
       }
       this._model = mongoose.model(this.name, schema);
     }
-    return this._model;
+    return this._model as Model<TDocument>;
   }
 
   // CRUD

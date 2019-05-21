@@ -1,8 +1,9 @@
 import {Injectable} from "brit";
 import {MongooseModuleConfig} from "./mongoose-module-config";
-import * as mongoose from 'mongoose';
 import {Mongoose} from "mongoose";
 import {CoreModule} from "@jchpro/web-app-core";
+
+const mongoose = require('mongoose');
 
 @Injectable({async: true})
 export class MongooseModule {
