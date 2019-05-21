@@ -9,7 +9,7 @@ export class Root {
     private _core: CoreModule,
     private _resourceModel: Resource
   ) {
-    console.log(this._resourceModel.model);
+    this._core.log.info(`Mongoose model "${this._resourceModel.model.modelName}" is ready`);
     this._core.runServer();
   }
 
